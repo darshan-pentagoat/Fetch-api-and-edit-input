@@ -5,6 +5,7 @@ import Product from "./Product";
 import Reducer from "./Reducer";
 import Fetch from "./Fetch";
 import EditableInput from "./EditableInput";
+import ToDo from "./ToDo";
 
 const Home = () => {
   const [view, setView] = useState("home");
@@ -17,6 +18,7 @@ const Home = () => {
       <button onClick={() => setView("product")}>Product</button>
       <button onClick={() => setView("FetchApi")}>Fetch API</button>
       <button onClick={() => setView("EditInput")}>Editable Input</button>
+      <button onClick={() => setView("todo")}>Todo List</button>
 
       {view === "home" && <p>Home page</p>}
       {view === "contact" && <Contact />}
@@ -25,6 +27,7 @@ const Home = () => {
       {view === "reducer" && <Reducer />}
       {view === "FetchApi" && <Fetch />}
       {view === "EditInput" && <EditableInput />}
+      {view === "todo" && <ToDo />}
     </div>
   );
 };
