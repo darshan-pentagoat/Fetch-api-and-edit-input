@@ -1,5 +1,4 @@
 import { CartProvider } from "./CartContext";
-import Fetch from "./Fetch";
 import Home from "./Home";
 
 const App = () => {

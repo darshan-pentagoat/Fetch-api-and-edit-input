@@ -8,6 +8,7 @@ import EditableInput from "./EditableInput";
 import ToDo from "./ToDo";
 import "./app.css";
 import Search from "./Search";
+import Pagination from "./Pagination";
 
 const Home = () => {
   const [view, setView] = useState("home");
@@ -62,6 +63,12 @@ const Home = () => {
       >
         Search
       </button>
+      <button
+        onClick={() => setView("pagination")}
+        className={view === "pagination" ? "active" : ""}
+      >
+        Pagination
+      </button>
 
       {view === "home" && <p>Home page</p>}
       {view === "contact" && <Contact />}
@@ -72,6 +79,7 @@ const Home = () => {
       {view === "EditInput" && <EditableInput />}
       {view === "todo" && <ToDo />}
       {view === "search" && <Search />}
+      {view === "pagination" && <Pagination />}
     </div>
   );
 };
