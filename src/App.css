@@ -1,0 +1,14 @@
+.nav_button button {
+  border: 0px;
+  padding: 8px 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.nav_button button:hover {
+  background: #0e7777;
+  color: rgb(255, 255, 255);
+}
+.nav_button .active {
+  background: #0e7777;
+  color: rgb(255, 255, 255);
+}
