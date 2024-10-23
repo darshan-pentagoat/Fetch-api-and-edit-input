@@ -9,6 +9,7 @@ import ToDo from "./ToDo";
 import "./app.css";
 import Search from "./Search";
 import Pagination from "./Pagination";
+import PasswordValidator from "./PasswordValidator";
 
 const Home = () => {
   const [view, setView] = useState("home");
@@ -69,6 +70,12 @@ const Home = () => {
       >
         Pagination
       </button>
+      <button
+        onClick={() => setView("validator")}
+        className={view === "validator" ? "active" : ""}
+      >
+        Password Validator
+      </button>
 
       {view === "home" && <p>Home page</p>}
       {view === "contact" && <Contact />}
@@ -80,6 +87,7 @@ const Home = () => {
       {view === "todo" && <ToDo />}
       {view === "search" && <Search />}
       {view === "pagination" && <Pagination />}
+      {view === "validator" && <PasswordValidator />}
     </div>
   );
 };
